@@ -95,14 +95,12 @@ enum {
     CAMERA_MSG_ALL_MSGS = 0xFFFF
 };
 
-#ifdef QCOM_HARDWARE
 /** meta data type in CameraMetaDataCallback */
 enum {
     CAMERA_META_DATA_ASD = 0x001,    //ASD data
     CAMERA_META_DATA_FD = 0x002,     //FD/FP data
     CAMERA_META_DATA_HDR = 0x003,    //Auto HDR data
 };
-#endif
 
 /** cmdType in sendCommand functions */
 enum {
@@ -187,7 +185,6 @@ enum {
      * count is non-positive or too big to be realized.
      */
     CAMERA_CMD_SET_VIDEO_BUFFER_COUNT = 10,
-#ifdef QCOM_HARDWARE
     /**
      * Commands to enable/disable preview histogram
      *
@@ -200,7 +197,6 @@ enum {
     CAMERA_CMD_HISTOGRAM_SEND_DATA  = 13,
     CAMERA_CMD_LONGSHOT_ON = 14,
     CAMERA_CMD_LONGSHOT_OFF = 15,
-#endif
     CAMERA_CMD_METADATA_ON = 100,
     CAMERA_CMD_METADATA_OFF = 101,
 };
